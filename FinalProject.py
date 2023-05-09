@@ -4,14 +4,16 @@ root = Tk()
 root.title("Billing system")
 root.geometry('850x720')
 bg_color = 'Black'
-title = Label(root, text='Concession Stand ', bg=bg_color, fg='white', font=('times new roman', 25, 'bold'),
-              relief=GROOVE)
+
+# Title of the application
+title = Label(root, text='Concession Stand ', bg=bg_color, fg='white', font=('times new roman', 25, 'bold'))
 title.pack(fill=X)
-# This displays the Items that are served in the concession stand and gives you an entry box where you can enter the
-# quantity and prices of each Item
-products = LabelFrame(root, text='Food & Drinks', font=('Arial', 15, 'bold'), fg='Black', )
+
+# Frame for food and drinks
+products = LabelFrame(root, text='Food & Drinks', font=('Arial', 15, 'bold'), fg='Black')
 products.place(x=5, y=90, width=800, height=550)
 
+# Labels and Entry widgets for each item
 items = Label(products, text='Items', font=('Arial', 20, 'bold'), fg='black')
 items.grid(row=0, column=0, padx=20, pady=15)
 
@@ -21,79 +23,120 @@ n.grid(row=0, column=1, padx=20, pady=15)
 cost = Label(products, text='Cost', font=('Arial', 20, 'bold'), fg='black')
 cost.grid(row=0, column=2, padx=20, pady=15)
 
+# Popcorn
 Popcorn = Label(products, text='Popcorn', font=('Arial', 15, 'bold'), fg='Black')
 Popcorn.grid(row=1, column=0, padx=20, pady=15)
 
-Popcorn_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Popcorn_txt.grid(row=1, column=1, padx=5, pady=5)
+Popcorn_qty_txt = Entry(products, font='Arial 15 bold',)
+Popcorn_qty_txt.grid(row=1, column=1, padx=5, pady=5)
 
-Popcorn_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Popcorn_txt.grid(row=1, column=2, padx=20, pady=15)
+Popcorn_cost_txt = Entry(products, font='Arial 15 bold',)
+Popcorn_cost_txt.grid(row=1, column=2, padx=20, pady=15)
 
+# Hotdog
 Hotdog = Label(products, text='Hotdog', font=('Arial', 15, 'bold'), fg='Black')
 Hotdog.grid(row=2, column=0, padx=20, pady=15)
 
-Hotdog_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Hotdog_txt.grid(row=2, column=1, padx=20, pady=15)
+Hotdog_qty_txt = Entry(products, font='Arial 15 bold',)
+Hotdog_qty_txt.grid(row=2, column=1, padx=20, pady=15)
 
-Hotdog_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Hotdog_txt.grid(row=2, column=2, padx=20, pady=15)
+Hotdog_cost_txt = Entry(products, font='Arial 15 bold',)
+Hotdog_cost_txt.grid(row=2, column=2, padx=20, pady=15)
 
+# Pizza
 Pizza = Label(products, text='Pizza', font=('Arial', 15, 'bold'), fg='Black')
 Pizza.grid(row=3, column=0, padx=20, pady=15)
 
-Pizza_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Pizza_txt.grid(row=3, column=1, padx=20, pady=15)
+Pizza_qty_txt = Entry(products, font='Arial 15 bold',)
+Pizza_qty_txt.grid(row=3, column=1, padx=20, pady=15)
 
-Pizza_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Pizza_txt.grid(row=3, column=2, padx=20, pady=15)
+Pizza_cost_txt = Entry(products, font='Arial 15 bold',)
+Pizza_cost_txt.grid(row=3, column=2, padx=20, pady=15)
 
+# Water
 Water = Label(products, text='Water', font=('Arial', 15, 'bold'), fg='Black')
 Water.grid(row=4, column=0, padx=20, pady=15)
 
-Water_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Water_txt.grid(row=4, column=1, padx=20, pady=15)
+# Water
+Water_qty_txt = Entry(products, font='Arial 15 bold',)
+Water_qty_txt.grid(row=4, column=1, padx=20, pady=15)
 
-Water_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Water_txt.grid(row=4, column=2, padx=20, pady=15)
+Water_cost_txt = Entry(products, font='Arial 15 bold',)
+Water_cost_txt.grid(row=4, column=2, padx=20, pady=15)
 
-Drinks = Label(products, text='Total', font=('Arial', 20, 'bold'), fg='Black')
-Drinks.grid(row=5, column=0, padx=20, pady=15)
+# Soda
+Drink = Label(products, text='Soda', font=('Arial', 15, 'bold'), fg='Black')
+Drink.grid(row=5, column=0, padx=20, pady=15)
 
-Drinks_text = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Drinks_text.grid(row=5, column=1, padx=20, pady=15)
+Drink_qty_txt = Entry(products, font='Arial 15 bold',)
+Drink_qty_txt.grid(row=5, column=1, padx=20, pady=15)
 
-Drinks_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-Drinks_txt.grid(row=5, column=2, padx=20, pady=15)
+Drink_cost_txt = Entry(products, font='Arial 15 bold',)
+Drink_cost_txt.grid(row=5, column=2, padx=20, pady=15)
 
+# Total
 total = Label(products, text='Total', font=('Arial', 20, 'bold'), fg='Black')
 total.grid(row=6, column=0, padx=20, pady=15)
 
-total_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-total_txt.grid(row=6, column=1, padx=20, pady=15)
+total_qty_txt = Entry(products, font='Arial 15 bold',)
+total_qty_txt.grid(row=6, column=1, padx=20, pady=15)
 
-total_txt = Entry(products, font='Arial 15 bold', relief=SUNKEN, bd=3, justify=CENTER)
-total_txt.grid(row=6, column=2, padx=20, pady=15)
+total_cost_txt = Entry(products, font='Arial 15 bold',)
+total_cost_txt.grid(row=6, column=2, padx=20, pady=15)
+
+# this button is used to exit the program
+exit_b = Button(products, text='Exit', bg=bg_color, fg='white', font=('Arial', 12, 'bold'), command=exit)
+exit_b.grid(row=7, column=0, padx=20, pady=15)
 
 
-# this will open a new window to where the receipt will be created.
 def open_win():
     new = Toplevel(root)
     new.geometry("650x720")
     new.title("Receipt")
 
-    receipt = Frame(new, relief=GROOVE, bd=10)
-    receipt.place(x=5, y=10, width=635, height=700)
-    Label(receipt, text='Receipt', font='Arial 15 bold', bd=7, relief=GROOVE).pack(fill=X)
-    textarea = Text(receipt, font='arial 15 bold')
+    frame = Frame(new, relief=GROOVE, bd=10)
+    frame.place(x=5, y=10, width=635, height=700)
+    Label(frame, text='Receipt', font='Arial 15 bold',).pack(fill=X)
+
+    textarea = Text(frame, font='arial 15 bold')
     textarea.pack(fill=BOTH)
 
+    # Get the values from the Entry fields
+    popcorn_qty = Popcorn_qty_txt.get()
+    popcorn_cost = Popcorn_cost_txt.get()
+    hotdog_qty = Hotdog_qty_txt.get()
+    hotdog_cost = Hotdog_cost_txt.get()
+    pizza_qty = Pizza_qty_txt.get()
+    pizza_cost = Pizza_cost_txt.get()
+    water_qty = Water_qty_txt.get()
+    water_cost = Water_cost_txt.get()
+    soda_qty = Drink_qty_txt.get()
+    soda_cost = Drink_cost_txt.get()
+
+    # Calculate the total cost of each item
+    popcorn_total = float(popcorn_qty) * float(popcorn_cost)
+    hotdog_total = float(hotdog_qty) * float(hotdog_cost)
+    pizza_total = float(pizza_qty) * float(pizza_cost)
+    water_total = float(water_qty) * float(water_cost)
+    soda_total = float(soda_qty) * float(soda_cost)
+
+    # Format the receipt
+    receipt_text = f"""\
+    Item          Quantity    Cost    Total
+    ----------------------------------------
+    Popcorn       {popcorn_qty}        {popcorn_cost}      {popcorn_total}
+    Hotdog        {hotdog_qty}         {hotdog_cost}       {hotdog_total}
+    Pizza         {pizza_qty}          {pizza_cost}        {pizza_total}
+    Water         {water_qty}          {water_cost}        {water_total}
+    Soda          {soda_qty}           {soda_cost}         {soda_total}
+    ----------------------------------------"""
+
+    # Insert the formatted receipt into the Text widget
+    textarea.insert(INSERT, receipt_text)
 
 
-
-# The purpose of this button is to send the Price of each item to the Receipt Window
-receipt_button = Button(root, text="Final Receipt", bg=bg_color, fg='white', font=('Arial', 12, 'bold'), relief=RAISED,
-                        bd=15, command=open_win)
+# Button to open the receipt window
+receipt_button = Button(root, text="Final Receipt", bg=bg_color, fg='white', font=('Arial', 12, 'bold'), command=open_win)
 receipt_button.pack(side=BOTTOM, padx=220, pady=50)
 
 root.mainloop()
