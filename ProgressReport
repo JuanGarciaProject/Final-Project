@@ -1,3 +1,21 @@
-In the final project I have complete added the type of item that will be in the GUI nad it allows you to select the quatity and price of each item.
-Some of the problems that I have face are foramtting the buttons and what to make my second window. I will figure out how to foramt in the best way possible 
-to meet the requierments.
+
+I have started to build a new GUI that serves as billing Sytem for a concession stand. My first steps are to create to format 
+the first window by creating a fram. This allows me to work on the first window without interfering with the title of the Program.
+
+I created all of the Labels and foramted the entry boxes and item type into rows and columns. After creating the forst one simply 
+copying and pasting the the first item foramt for the rest of the item helped me save time. I then swithed the variable to better match
+items and to not have overlapping variable and change the column and rows to prevnt them from stacking on the first row and column.
+
+Then I created a function in pyhton to open a secondary window with a button. I used the same foramt as the main page making the problem 
+easier to solve and then created a "Receipt Button", this would be used to make the function work and open the new window.
+
+In the final project I have complete added the type of item that will be in the GUI nad it allows you to select the quatity and price 
+of each item. Some of the problems that I have face are foramtting the buttons and what to make my second window. I will figure out how to 
+foramt in the best way possible to meet the requierments.
+
+Lasty I created the format for the receipt layout and made sure all of the math was done correct. I then added up all of the item totals 
+to give me the Final Total of the program. I also created a secondary button that woul operate as a exit function which would stop and exit 
+program.
+
+
+
