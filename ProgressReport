@@ -1,4 +1,3 @@
-
 I have started to build a new GUI that serves as billing Sytem for a concession stand. My first steps are to create to format 
 the first window by creating a fram. This allows me to work on the first window without interfering with the title of the Program.
 
@@ -16,6 +15,3 @@ foramt in the best way possible to meet the requierments.
 Lasty I created the format for the receipt layout and made sure all of the math was done correct. I then added up all of the item totals 
 to give me the Final Total of the program. I also created a secondary button that woul operate as a exit function which would stop and exit 
 program.
-
-
-
